@@ -3,7 +3,7 @@ package com.dm.remoting.tcpip.constent;
 /**
  * @author whh
  * @date 2017/2/10 0010
- * @see SocketConstent1
+ * @see SocketConstent111
  * @since 1.1
  */
 @SuppressWarnings("all")

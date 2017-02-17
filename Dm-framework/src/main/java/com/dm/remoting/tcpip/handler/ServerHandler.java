@@ -1,6 +1,8 @@
 package com.dm.remoting.tcpip.handler;
 
 import com.dm.remoting.tcpip.ServerSocket;
+import com.dm.remoting.tcpip.context.DmContext;
+import com.dm.remoting.tcpip.data.GroupData;
 import com.dm.remoting.tcpip.processor.CommProcessor;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.buffer.ChannelBuffers;
@@ -41,10 +43,15 @@ public class ServerHandler extends SimpleChannelUpstreamHandler implements TCPIP
     public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
             throws Exception {
         ChannelBuffer message = (ChannelBuffer) e.getMessage();
-        byte[] bytes =new  byte[message.capacity()];
-        message.readBytes(bytes);
-        logger.info("服务端从："+e.getRemoteAddress()+"接受："+ new String(bytes));
-        commProcessor.runs();
+        byte[] segment =new  byte[message.capacity()];
+        message.readBytes(segment);
+        logger.info("服务端从：" + e.getRemoteAddress() + "接受：" + new String(segment));
+
+
+        DmContext dc = new DmContext();
+        commProcessor.decode(dc,segment,null);
+
+
 
         String results = "result hello world";
         byte[] resultByte = results.getBytes();

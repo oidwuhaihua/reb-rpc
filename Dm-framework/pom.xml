@@ -79,6 +79,14 @@
         <version>3.1.2.RELEASE</version>
     </dependency>
     <!-- end spring -->
+    <!-- begin dom4j -->
+    <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+    <dependency>
+        <groupId>dom4j</groupId>
+        <artifactId>dom4j</artifactId>
+        <version>1.6.1</version>
+    </dependency>
+    <!-- end dom4j -->
 
     <dependency>
         <groupId>local.libs</groupId>
