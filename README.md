@@ -3,13 +3,13 @@ Dm 是一个集成spring基于netty实现的远程通信框架,并且支持多�
 
 ![img](https://www.rebby.cn/images/Dm.png)
 
-# 通讯模块
+## 通讯模块
 通讯模块作为接收TCPIP协议请求入口以及返回响应结果的出口，主要包含TCPIPService、DeCode、EnCode和ActionHander四个部分，该模块式基于Netty架构基础上的封装结果，架构可根据实际需要替换。
 - TCPIPService是TCPIP服务器，实现了基于套接字socket的服务端和客户端，是访问的入口和响应出口，支持OIO、NIO等模型。
 - DeCode是解析报文模块，对Request发送过来的报文进行解析，解析过程需要调用报文格式模块IFomat。
 - EnCode是组装报文模块，对处理的结果数据进行报文组装，然后发送给Response，组装过程需要调用报文格式模块IFomat，与DeCode模块处理的格式对应。
 - ActionHandler是功能处理器，接收DeCode接口处理后的数据，然后调用ActionProxy功能代理器进行相应功能处理。
-# 报文模块
+## 报文模块
 报文模块是自定义封装模块，主要包含格式接口定义和业务报文格式（如String格式、XML格式），对报文格式进行初始化管理，并提供报文的组包和解包等功能供通讯模块调用。
 IFormat是报文格式化接口，定义报文处理接口，后续业务扩展时可基于此接口类扩展相应的报文格式。
 
