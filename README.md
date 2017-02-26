@@ -1,7 +1,7 @@
 Dm 是一个集成spring基于netty实现的远程通信框架,并且支持多种报文协议。
 
 
-![img](https://www.rebby.cn/images/Dm.png)
+![img](https://github.com/oidwuhaihua/imagedata/Dm.png)
 ## 通讯模块
 通讯模块作为接收TCPIP协议请求入口以及返回响应结果的出口，主要包含TCPIPService、DeCode、EnCode和ActionHander四个部分，该模块式基于Netty架构基础上的封装结果，架构可根据实际需要替换。
 - TCPIPService是TCPIP服务器，实现了基于套接字socket的服务端和客户端，是访问的入口和响应出口，支持OIO、NIO等模型。
