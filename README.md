@@ -1,6 +1,4 @@
-Dm 是一个集成spring基于netty实现的远程通信框架,并且支持多种报文协议。
-
-
+Dm 是一个集成spring基于netty实现的远程通信框架,并且支持多种报文协议。架构结构如下所示：
 <center>
 <img src="https://github.com/oidwuhaihua/imagedata/blob/master/Dm.png" width="60%" height="60%" />
 </center>
