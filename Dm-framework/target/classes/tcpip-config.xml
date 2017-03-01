@@ -9,4 +9,19 @@
 
 	<bean id="commProcessor" class="com.dm.remoting.tcpip.processor.CommProcessorImpl"/>
 
+	<bean id="formatConfig" class="com.dm.remoting.tcpip.format.FormatConfigContainer">
+		<!-- Format格式化配置 -->
+		<property name="defines">
+			<map>
+				<entry key="formatDefine" value="com.dm.remoting.tcpip.format.xml.FormatDefine"/>
+			</map>
+		</property>
+		<property name="configs">
+			<map>
+				<entry key="head" value="src/main/java/META-INF/txclient"/>
+				<entry key="client" value="src/main/java/META-INF/txhead"/>
+				<entry key="server" value="src/main/java/META-INF/txserver"/>
+			</map>
+		</property>
+	</bean>
 </beans>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SDOROOT id="stringHead"	desc="贷记卡报文头" >
+	<StringFmtDefine dataName="sendstringHead" fieldName = "">
+
+		<StringFmtGroup dataName = "head" fieldName = "SYS_HEAD" >
+			<StringFmtField dataName="pkgType" fieldName="pkgtype"  fixedValue="0000" delim="false" /><!-- 报文种类 -->
+			<StringFmtField dataName="mac" fieldName="Mac" fixedValue="1C247FEFB6A8A3DA" delim="false"/><!--mac-->		
+			<StringFmtField dataName="trsCode" fieldName="trscode" fixedValue="774002" delim="false"/><!--交易码-->
+			<StringFmtField dataName="version" fieldName="version" fixedValue="1.00" delim="false"/><!-- 版本kgn -->
+			<StringFmtField dataName="branCode" fieldName="trans_bran_code" fixedValue="9900      " delim="false"/><!--网银填写9900  -->			
+			<StringFmtField dataName="userId" fieldName="oper_no" fixedValue="99004   " delim="false"/><!-- 网银填写99004 -->
+			<StringFmtField dataName="chkOperNo" fieldName="chk_oper_no" fixedValue="        " delim="false"/><!-- 第一授权号填空 -->
+			<StringFmtField dataName="chkOperPwd" fieldName="chk_oper_pwd" fixedValue="                " delim="false"/><!-- 第一授权密码，填空  -->
+			<StringFmtField dataName="chkOperCvv" fieldName="chk_oper_cvv" fixedValue="                " delim="false"/><!--第一授权密码cvv，填空  -->
+			<StringFmtField dataName="authOperNo" fieldName="auth_oper_no" fixedValue="        " delim="false"/><!-- 第二授权号，填空 -->
+			<StringFmtField dataName="authOperPwd" fieldName="auth_oper_pwd" fixedValue="                " delim="false"/><!-- 第二授权号密码，填空 -->		
+			<StringFmtField dataName="authOperCvv" fieldName="auth_oper_cvv" fixedValue="                " delim="false"/><!-- 第二授权号密码cvv,填空 -->
+			
+			<StringFmtField dataName="seqNo" fieldName="seqno" fixedValue="12345678" delim="false"/> <!--网银填写网银业务号（必须唯一）  -->
+			<StringFmtField dataName="transType" fieldName="trans_type" fixedValue="0" delim="false"/><!-- 交易标志，0-正常交易；1-当日冲正 -->
+			<StringFmtField dataName="linkFlag" fieldName="link_flag" fixedValue="0" delim="false"/><!-- 联动标志：填写0 -->			
+			<StringFmtField dataName="rushSeqNo" fieldName="rushseqno" fixedValue="        " delim="false"/><!-- 原流水号，冲正填写原流水号 -->
+			
+			
+			<StringFmtField dataName="trsDate" fieldName="trsdate" fixedValue="2013-11-21" delim="false"/><!-- 会计日期，填写交易日期，yyyy-mm-dd  -->
+			<StringFmtField dataName="errDate" fieldName="errdate" fixedValue="          " delim="false"/><!-- 错账日期，填空 -->
+			<StringFmtField dataName="deviceId" fieldName="devid" fixedValue="0000000131" delim="false"/><!-- 设备标识，填写安全结点号，由核心系统分配 -->			
+			<StringFmtField dataName="appCode" fieldName="appcode" fixedValue="          " delim="false"/><!-- 项目代码，非中间业务填空（中间业务使用） -->	
+			<StringFmtField dataName="bufLenth" fieldName="buflen" fixedValue="          " delim="false"/><!-- 报文长度，填写报文体长度 -->	
+		</StringFmtGroup>
+	</StringFmtDefine>
+	
+	<StringFmtDefine dataName="receivestringHead" fieldName = "">
+
+		<StringFmtGroup dataName = "head" fieldName = "SYS_HEAD" >
+			<StringFmtField dataName="pkgType" fieldName="Pkgtype"  fixedValue="0000" delim="false" /><!-- 报文种类 -->
+			<StringFmtField dataName="mac" fieldName="Mac" fixedValue="1C247FEFB6A8A3DA" delim="false"/><!--mac-->		
+			<StringFmtField dataName="userId" fieldName="oper_no" fixedValue="774002" delim="false"/><!--柜员号-->
+			<StringFmtField dataName="seqNo" fieldName="Seqno" fixedValue="1.00" delim="false"/><!-- 流水号 -->
+			<StringFmtField dataName="transCode" fieldName="Trscode" fixedValue="9951      " delim="false"/><!--交易码-->			
+			<StringFmtField dataName="tranDate" fieldName="Trsdate" fixedValue="01627   " delim="false"/><!--会计日期,YYYY-MM-DD 格式-->
+			<StringFmtField dataName="retCode" fieldName="responsecode" fixedValue="        " delim="false"/><!-- 响应码 -->
+			<StringFmtField dataName="retMsg" fieldName="respdesc" fixedValue="                " delim="false"/><!-- 响应信息 -->			
+			<StringFmtField dataName="deviceId" fieldName="Devid" fixedValue="                " delim="false"/><!-- 设备标识 -->
+		</StringFmtGroup>
+	</StringFmtDefine>
+</SDOROOT>	

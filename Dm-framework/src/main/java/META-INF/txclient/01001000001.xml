@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SDOROOT id="01001000001" desc="综合转账">
+	<FmtDefine dataName="send01001000001" fieldName="" headName="sendesbHead"><!-- 请求报文 -->
+		<FmtGroup dataName="body" fieldName="BODY"><!-- 报文体 -->
+			<FmtField dataName="extBusTime" fieldName="EXT_BUS_TIME" /><!-- 外围业务批次 Y -->
+			<FmtField dataName="extBusCode" fieldName="EXT_BUS_CODE" /><!-- 外围产品代码 Y -->
+			<FmtField dataName="transSrc" fieldName="TRANS_SRC" /><!-- 交易来源 N -->
+			<FmtField dataName="transAttr" fieldName="TRANS_ATTR" /><!-- 交易属性 Y -->
+			<FmtField dataName="transAddr" fieldName="TRANS_ADDR" /><!-- 交易渠道 Y -->
+			<FmtField dataName="actFlag" fieldName="ACT_FLAG" /><!-- 执行标志 N -->
+			<FmtField dataName="openAccFlag" fieldName="OPEN_ACCT_FLAG" /><!-- 自动开户标志 Y -->
+			<FmtField dataName="ctrlFlag" fieldName="CTRL_FLAG" /><!-- 控制位 Y -->
+			<FmtField dataName="busNo" fieldName="BUS_NO" /><!-- 消费方系统流水号 Y -->
+			<FmtField dataName="addInfo" fieldName="ADD_INFO" /><!-- 附件数据域 N -->
+			<FmtField dataName="records" fieldName="RECORDS" /><!-- 重复套帐记录数 Y -->
+			<FmtRepeat dataName="transList" fieldName="TRAN_LIST_ARRAY"><!-- 交易明细信息数组 -->
+				<FmtField dataName="transType" fieldName="TRANS_TYPE" /><!-- 交易性质 Y -->
+				<FmtField dataName="cashFlag" fieldName="CASH_FLAG" /><!-- 现转标志 Y -->
+				<FmtField dataName="chkNameFlag" fieldName="CHK_NAME_FLAG" /><!-- 户名检查标志 N -->
+				<FmtField dataName="curCode" fieldName="CUR_CODE" /><!-- 币种 Y -->
+				<FmtField dataName="curType" fieldName="CUR_TYPE" /><!-- 钞汇类别 N -->
+				<FmtField dataName="transAmt" fieldName="TRANS_AMT" /><!-- 交易金额 Y -->
+				<FmtField dataName="deductFlag" fieldName="DEDUCT_FLAG" /><!-- 扣款标志 N -->
+				<FmtField dataName="payAccNo" fieldName="PAY_ACCT_NO" /><!-- 付款人帐号 N -->
+				<FmtField dataName="payAccSeqNo" fieldName="PAY_ACCT_SEQNO" /><!-- 付款人账户序号 N -->
+				<FmtField dataName="closeFlag" fieldName="CLOSE_FLAG" /><!-- 付款账户销户标志 N -->
+				<FmtField dataName="payAccAttr" fieldName="PAY_ACCT_ATTR" /><!-- 付款人账户属性 N -->
+				<FmtField dataName="payAccName" fieldName="PAY_ACCT_NAME" /><!-- 付款人户名 N -->
+				<FmtField dataName="paySubCode" fieldName="PAY_SUB_CODE" /><!-- 付款科目号 N -->
+				<FmtField dataName="payBusCode" fieldName="PAY_BUS_CODE" /><!-- 付款人业务种类 N -->
+				<FmtField dataName="payBankNo" fieldName="PAY_BANK_NO" /><!-- 付款人开户行号（机构号） N -->
+				<FmtField dataName="payPassbookNo" fieldName="PAY_PASSBOOK_NO" /><!-- 存折或证实书号码 N -->
+				<FmtField dataName="cardFlag" fieldName="CARD_FLAG" /><!-- 卡折标志 N -->
+				<FmtField dataName="pwdFlag" fieldName="PWD_FLAG" /><!-- 密码校验标志 N -->
+				<FmtField dataName="drawMode" fieldName="DRAW_MODE" /><!-- 支取方式 N -->
+				<FmtField dataName="drawPwd" fieldName="DRAW_PWD" /><!-- 支取密码 N -->
+				<FmtField dataName="track2Data" fieldName="TRACK2_DATA" /><!-- 二磁道数据 N -->
+				<FmtField dataName="cardSeqNo" fieldName="CARD_SEQNO" /><!-- 卡序列号 N -->
+				<FmtField dataName="icData" fieldName="IC_DATA" /><!-- IC卡安全数据 N -->
+				<FmtField dataName="certType" fieldName="CERT_TYPE" /><!-- 证件类型 N -->
+				<FmtField dataName="certNo" fieldName="CERT_NO" /><!-- 证件号码 N -->
+				<FmtField dataName="recAccNo" fieldName="PAYEE_ACCT_NO" /><!-- 收款人帐号 N -->
+				<FmtField dataName="recAccSeqNo" fieldName="PAYEE_ACCT_SEQNO" /><!-- 收款人账户序号 N -->
+				<FmtField dataName="openFlag" fieldName="OPEN_FLAG" /><!-- 开户标志 N -->
+				<FmtField dataName="recAccAttr" fieldName="PAYEE_ACCT_ATTR" /><!-- 收款人账户属性 N -->
+				<FmtField dataName="recAccName" fieldName="PAYEE_ACCT_NAME" /><!-- 收款人户名 N -->
+				<FmtField dataName="recSubCode" fieldName="PAYEE_SUB_CODE" /><!-- 收款科目号 N -->
+				<FmtField dataName="recBusiCode" fieldName="PAYEE_BUSI_CODE" /><!-- 收款人业务种类 N -->
+				<FmtField dataName="payTerm" fieldName="PAYEE_TERM" /><!-- 存期 N -->
+				<FmtField dataName="recBankNo" fieldName="PAYEE_BANK_NO" /><!-- 收款人开户行号 N -->
+				<FmtField dataName="recPassbookNo" fieldName="PAYEE_PASSBOOK_NO" /><!-- 存折或证实书号码 N -->
+				<FmtField dataName="recTrack2" fieldName="PAYEE_TRACK2" /><!-- 收款账户二磁道 N -->
+				<FmtField dataName="payCardSeqNo" fieldName="PAYEE_CARD_SEQNO" /><!-- 卡序列号 N -->
+				<FmtField dataName="payIcData" fieldName="PAYEE_IC_DATA" /><!-- IC卡安全数据 N -->
+				<FmtField dataName="recCertType" fieldName="PAYEE_CERT_TYPE" /><!-- 收款人证件类型 N -->
+				<FmtField dataName="recCertNo" fieldName="PAYEE_CERT_NO" /><!-- 收款人证件号码 N -->
+				<FmtField dataName="listFlag" fieldName="LIST_FLAG" /><!-- 入明细标志 Y -->
+				<FmtField dataName="vouType" fieldName="VOU_TYPE" /><!-- 凭证种类 Y -->
+				<FmtField dataName="vouStartNo" fieldName="VOU_START_NO" /><!-- 凭证号码(起号) N -->
+				<FmtField dataName="vouEndNo" fieldName="VOU_END_NO" /><!-- 凭证号码(止号) N -->
+				<FmtField dataName="vouNum" fieldName="VOU_NUM" /><!-- 凭证数量 N -->
+				<FmtField dataName="feeMode" fieldName="FEE_MODE" /><!-- 手续费入账标志 N -->
+				<FmtField dataName="feeSubcode1" fieldName="FEE_SUBCODE1" /><!-- 手续费科目1 N -->
+				<FmtField dataName="feeBusiCode1" fieldName="FEE_BUSICODE1" /><!-- 手续费业务种类1 N -->
+				<FmtField dataName="feeAmt1" fieldName="FEE_AMT1" /><!-- 手续费金额1 N -->
+				<FmtField dataName="feeSubCode2" fieldName="FEE_SUBCODE2" /><!-- 手续费科目2 N -->
+				<FmtField dataName="feeBusiCode2" fieldName="FEE_BUSICODE2" /><!-- 手续费业务种类2 N -->
+				<FmtField dataName="feeAmt2" fieldName="FEE_AMT2" /><!-- 手续费金额2 N -->
+				<FmtField dataName="absCode" fieldName="ABS_CODE" /><!-- 摘要代码 N -->
+				<FmtField dataName="abs" fieldName="ABS" /><!-- 摘要 N -->
+				<FmtField dataName="remark" fieldName="REMARK" /><!-- 备注 N -->
+				<FmtField dataName="freezeAmt" fieldName="FREEZE_AMT" /><!-- 止付金额 N -->
+				<FmtField dataName="freezeNo" fieldName="FREEZE_NO" /><!-- 冻止/解冻止书编号 N -->
+				<FmtField dataName="freezeFlag" fieldName="FREEZE_FLAG" /><!-- 解冻止标志 N -->
+				<FmtField dataName="inAccNo" fieldName="IN_ACCT_NO" /><!-- 实际转入帐号 N -->
+				<FmtField dataName="inAccName" fieldName="IN_ACCT_NAME" /><!-- 实际转入户名 N -->
+				<FmtField dataName="inBranCode" fieldName="IN_BRAN_CODE" /><!-- 实际转入账户开户行 N -->
+				<FmtField dataName="inBranName" fieldName="IN_BRAN_NAME" /><!-- 实际转入账户开户行名 N -->
+				<FmtField dataName="outAccNo" fieldName="OUT_ACCT_NO" /><!-- 实际转出帐号 N -->
+				<FmtField dataName="outAccName" fieldName="OUT_ACCT_NAME" /><!-- 实际转出户名 N -->
+				<FmtField dataName="outBranCode" fieldName="OUT_BRAN_CODE" /><!-- 实际转出账户开户行 N -->
+				<FmtField dataName="outBranName" fieldName="OUT_BRAN_NAME" /><!-- 实际转出账户开户行名 N -->
+				<FmtField dataName="remitType" fieldName="REMIT_TYPE" /><!-- 汇划类型 N --> 
+				<FmtField dataName="addInfo" fieldName="ADD_INFO1" /><!-- 附件数据域 N --> 
+			</FmtRepeat>
+		</FmtGroup>
+	</FmtDefine>
+
+
+	<FmtDefine dataName="receive01001000001" fieldName="" headName="receiveesbHead"><!-- 响应报文 -->
+		<FmtGroup dataName="body" fieldName="BODY"><!-- 报文体 -->
+			<FmtField dataName="records" fieldName="RECORDS" /><!-- 文件记录数 -->
+			<FmtRepeat dataName="transList" fieldName="TRAN_LIST_ARRAY"><!-- 交易明细信息数组 -->
+				<FmtField dataName="acctAmt" fieldName="ACCT_AMT" /><!-- 记账实际发生额 -->
+				<FmtField dataName="payAcctAttr" fieldName="PAY_ACCT_ATTR" /><!-- 付款人账户属性代码 -->
+				<FmtField dataName="payAcctName" fieldName="PAY_ACCT_NAME" /><!-- 付款人账户名 -->
+				<FmtField dataName="payAvaBal" fieldName="PAY_AVA_BAL" /><!-- 付款方可用余额 -->
+				<FmtField dataName="payBal" fieldName="PAY_BAL" /><!-- 付款方余额 -->
+				<FmtField dataName="payAcctSub" fieldName="PAY_ACCT_SUB" /><!-- 付款方科目号 -->
+				<FmtField dataName="payeeAcctAttr" fieldName="PAYEE_ACCT_ATTR" /><!-- 收款人账户属性代码 -->
+				<FmtField dataName="payeeAcctSeqNo" fieldName="PAYEE_ACCT_SEQNO" /><!-- 收款人账户序号 -->
+				<FmtField dataName="fixAccNo" fieldName="FIX_ACCT_NO" /><!-- 定期账号 -->
+				<FmtField dataName="exprDate" fieldName="EXPR_DATE" /><!-- 到期日 -->
+				<FmtField dataName="rate" fieldName="RATE" /><!-- 年利率 -->
+				<FmtField dataName="inAcctName" fieldName="PAYEE_ACCT_NAME" /><!-- 收款人账户名 -->
+				<FmtField dataName="payeeAvaBal" fieldName="PAYEE_AVA_BAL" /><!-- 收款方可用余额 -->
+				<FmtField dataName="payeeBal" fieldName="PAYEE_BAL" /><!-- 收款方余额 -->
+				<FmtField dataName="payeeAcctSub" fieldName="PAYEE_ACCT_SUB" /><!-- 收款方科目号 -->
+				<FmtField dataName="freezeNo" fieldName="FREEZE_NO" /><!-- 冻止书编号 -->
+			</FmtRepeat>
+		</FmtGroup>
+	</FmtDefine>
+</SDOROOT>	

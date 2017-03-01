@@ -48,9 +48,8 @@ public class ServerHandler extends SimpleChannelUpstreamHandler implements TCPIP
         logger.info("服务端从：" + e.getRemoteAddress() + "接受：" + new String(segment));
 
 
-        DmContext dc = new DmContext();
+        DmContext dc = new DmContext() ;
         commProcessor.decode(dc,segment,null);
-
 
 
         String results = "result hello world";

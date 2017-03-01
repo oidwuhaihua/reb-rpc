@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SDOROOT id="esbHead" desc="账户基本信息查询">
+	<FmtDefine dataName="sendesbHead" fieldName=""><!-- 请求报文 -->
+	
+		<FmtGroup dataName="_esbSystem" fieldName="SYS_HEAD"><!-- 系统头 -->
+			<FmtField dataName="_esbServiceCode" fieldName="SERVICE_CODE" /><!-- 服务代码 -->
+			<FmtField dataName="_esbConsumerId" fieldName="CONSUMER_ID" fixedValue="010104" /><!-- 请求系统编号 010104-->
+			<FmtField dataName="_esbServiceScene" fieldName="SERVICE_SCENE" /><!-- 服务应用场景 -->
+			<FmtField dataName="_esbModuleId" fieldName="MODULE_ID" /><!-- 请求系统模块标识 -->
+			<FmtField dataName="_esbProgramId" fieldName="PROGRAM_ID" /><!-- 请求系统应用程序模块 -->
+			<FmtField dataName="_esbConsumerSeqNo" fieldName="CONSUMER_SEQ_NO" /><!-- 服务请求发送方流水号 系统ID(6位)+日期(8位)+序列号(8位)-->
+			<FmtField dataName="_esbOrgSysId" fieldName="ORG_SYS_ID" fixedValue="010104"/><!-- 发起方系统编号 -->
+			<FmtField dataName="_esbConsumerSvrId" fieldName="CONSUMER_SVR_ID" /><!-- 发起方服务器标识 -->
+			<FmtField dataName="_esbWsId" fieldName="WS_ID" /><!-- 终端标识 -->		
+			<FmtField dataName="_esbTranDate" fieldName="TRAN_DATE" /><!-- 发送方交易日期 YYYYMMDD-->
+			<FmtField dataName="_esbTimeStamp" fieldName="TRAN_TIMESTAMP" /><!-- 发送方交易时间 HHMMSSNNN-->
+			<FmtField dataName="_esbUserLang" fieldName="USER_LANG" /><!-- 用户语言，需要服务系统支持 取值范围：CHINESE－中文(默认)；ENGLISH－英文-->
+			<FmtField dataName="_esbFilePath" fieldName="FILE_PATH" /><!-- 文件路径 -->		
+			<FmtField dataName="_esbEsbSeqNo" fieldName="ESB_SEQ_NO" /><!-- ESB产生的流水号 -->
+		</FmtGroup>
+		
+		<FmtGroup dataName="_esbApp" fieldName="APP_HEAD"><!-- 应用头 -->
+			<FmtField dataName="_esbBranchId" fieldName="BRANCH_ID" /><!-- 发送方机构ID 000009-->
+			<FmtField dataName="_esbUserId" fieldName="USER_ID" /><!-- 服务请求者身份 -->
+			<FmtField dataName="_esbUserPassword" fieldName="USER_PASSWORD" /><!-- 服务请求者密码 -->
+			<FmtField dataName="_esbUserLevel" fieldName="USER_LEVEL" /><!-- 服务请求者级别 -->
+			<FmtField dataName="_esbUserType" fieldName="USER_TYPE" /><!-- 服务请求者身份 -->
+			<FmtField dataName="_esbApprFlag" fieldName="APPR_FLAG" /><!-- 复核标志 -->
+			<FmtRepeat dataName="_esbApprUserIdArray" fieldName="APPR_USER_ID_ARRAY"><!-- 录入柜员数组 -->
+				<FmtField dataName="_esbApprUserId" fieldName="APPR_USER_ID" /><!-- 交易录入柜员标识 -->
+				<FmtField dataName="_esbApprUserLevel" fieldName="APPR_USER_LEVEL" /><!-- 交易录入柜员级别 -->
+				<FmtField dataName="_esbApprUserType" fieldName="APPR_USER_TYPE" /><!-- 交易录入柜员类别 -->
+			</FmtRepeat>
+			<FmtField dataName="_esbAuthFlag" fieldName="AUTH_FLAG" /><!-- 授权标志 当交易发生授权时的取值范围如下：N－未授权 M－授权通过 授权时必输 -->	
+			<FmtRepeat dataName="_esbAuthUserIdArray" fieldName="AUTH_USER_ID_ARRAY"><!-- 授权柜员数组 -->
+				<FmtField dataName="_esbAuthUserId" fieldName="AUTH_USER_ID" /><!-- 授权柜员标识 -->
+				<FmtField dataName="_esbAuthPassword" fieldName="AUTH_PASSWORD" /><!-- 授权柜员密码 -->
+				<FmtField dataName="_esbAuthLevel" fieldName="AUTH_LEVEL" /><!-- 授权柜员级别 -->
+				<FmtField dataName="_esbAuthType" fieldName="AUTH_TYPE" /><!-- 授权柜员类别 -->
+			</FmtRepeat>			
+			<FmtField dataName="_esbBizSeqNo" fieldName="BIZ_SEQ_NO" /><!-- 发起方业务流水号 -->
+			<FmtField dataName="_esbReversalDate" fieldName="REVERSAL_DATE" /><!-- 需冲正的原交易日期 -->			
+			<FmtField dataName="_esbReversalSeqNo" fieldName="REVERSAL_SEQ_NO" /><!-- 需冲正的原业务流水号 -->
+			<FmtField dataName="_esbQueryKey" fieldName="QUERY_KEY" /><!-- 查询结果定位串 -->		
+			<FmtField dataName="_esbPgupOrPgdn" fieldName="PGUP_OR_PGDN" /><!-- 上翻/下翻标志 -->
+			<FmtField dataName="_esbPerPageNum" fieldName="PER_PAGE_NUM" /><!-- 要求每页返回记录总数 -->				
+		</FmtGroup>
+		
+		<FmtGroup dataName="_esbLocal" fieldName="LOCAL_HEAD"><!-- 本地头 -->
+			<FmtField dataName="_esbRuralBranchId" fieldName="RURAL_BRANCH_ID" fixedValue="0000"/><!-- 法人编号 -->
+			<FmtField dataName="_esbPKeyDate" fieldName="KEY_DATE" /><!-- 密钥日期 -->
+			<FmtField dataName="_esbPKeyName" fieldName="KEY_NAME" fixedValue="1" /><!-- 密钥名称 -->
+			<FmtField dataName="_esbBusSeqNo" fieldName="BUS_SEQ_NO" /><!-- 业务跟踪号 -->
+			<FmtField dataName="_esbChannelCode" fieldName="CHANNEL_CODE" /><!-- 渠道号现在默认填写000001 -->
+			<FmtField dataName="_esbKeyType" fieldName="KEY_TYPE" fixedValue="2" /><!-- 加密类型 -->
+			<FmtField dataName="_esbKeyFactor" fieldName="KEY_FACTOR" /><!-- 加密因子 -->
+			<FmtField dataName="esbLinkFlag" fieldName="LINK_FLAG" /><!-- 联动标志 -->
+			<FmtField dataName="_esbSubSystemNo" fieldName="SUB_SYSTEM_NO" /><!-- 目标系统ID -->
+		</FmtGroup>
+
+	</FmtDefine>
+
+
+	<FmtDefine dataName="receiveesbHead" fieldName=""><!-- 响应报文 -->
+	
+		<FmtGroup dataName="system" fieldName="SYS_HEAD"><!-- 系统头 -->
+			<FmtField dataName="_esbServiceCode" fieldName="SERVICE_CODE" /><!-- 服务代码 -->
+			<FmtField dataName="_esbConsumerId" fieldName="CONSUMER_ID" /><!-- 请求系统编号 -->
+			<FmtField dataName="_esbServiceScene" fieldName="SERVICE_SCENE" /><!-- 服务应用场景 -->
+			<FmtField dataName="_esbEsbSeqNo" fieldName="ESB_SEQ_NO" /><!-- ESB产生的流水号 -->
+			<FmtField dataName="_esbModuleId" fieldName="MODULE_ID" /><!-- 请求系统模块标识 -->
+			<FmtField dataName="_esbProgramId" fieldName="PROGRAM_ID" /><!-- 请求系统应用程序模块 -->
+			<FmtField dataName="_esbConsumerSeqNo" fieldName="CONSUMER_SEQ_NO" /><!-- 服务请求发送方流水号 -->			
+			<FmtField dataName="_esbOrgSysId" fieldName="ORG_SYS_ID" /><!-- 发起方系统编号 -->			
+			<FmtField dataName="_esbConsumerSvnId" fieldName="CONSUMER_SVR_ID" /><!-- 发起方服务器标识 -->
+			<FmtField dataName="_esbWsId" fieldName="WS_ID" /><!-- 终端标识 -->			
+			<FmtField dataName="_esbTranDate" fieldName="TRAN_DATE" /><!-- 交易日期 -->
+			<FmtField dataName="_esbTimeStamp" fieldName="TRAN_TIMESTAMP" /><!-- 交易时间 -->
+			<FmtField dataName="_esbUserLang" fieldName="USER_LANG" /><!-- 用户语言 -->		
+			<FmtField dataName="_esbFilePath" fieldName="FILE_PATH" /><!-- 文件路径 -->	
+			<FmtField dataName="_esbRetStatus" fieldName="RET_STATUS" /><!-- 交易状态 -->
+			<FmtRepeat dataName="_esbRet" fieldName="RET"><!-- 交易返回代码数组 -->
+				<FmtField dataName="_esbRetCode" fieldName="RET_CODE" /><!-- 交易返回代码 RET_CODE定义为“I + 系统ID （6位）+ 000000”，RET_MSG为"交易成功""-->
+				<FmtField dataName="_esbRetMsg" fieldName="RET_MSG" /><!-- 交易返回信息 -->
+			</FmtRepeat>
+		</FmtGroup>
+		
+		<FmtGroup dataName="_esbApp" fieldName="APP_HEAD"><!-- 应用头 -->
+			<FmtField dataName="_esbBranchId" fieldName="BRANCH_ID" /><!-- 发送方机构ID 000009-->
+			<FmtField dataName="_esbUserId" fieldName="USER_ID" /><!-- 服务请求者身份 -->
+			<FmtField dataName="_esbUserPassword" fieldName="USER_PASSWORD" /><!-- 服务请求者密码 -->
+			<FmtField dataName="_esbUserLevel" fieldName="USER_LEVEL" /><!-- 服务请求者级别 -->
+			<FmtField dataName="_esbUserType" fieldName="USER_TYPE" /><!-- 服务请求者身份 -->
+			<FmtField dataName="_esbApprFlag" fieldName="APPR_FLAG" /><!-- 复核标志 -->
+			<FmtRepeat dataName="_esbApprUserIdArray" fieldName="APPR_USER_ID_ARRAY"><!-- 录入柜员数组 -->
+				<FmtField dataName="_esbApprUserId" fieldName="APPR_USER_ID" /><!-- 交易录入柜员标识 -->
+				<FmtField dataName="_esbApprUserLevel" fieldName="APPR_USER _LEVEL" /><!-- 交易录入柜员级别 -->
+				<FmtField dataName="_esbApprUserType" fieldName="APPR_USER _TYPE" /><!-- 交易录入柜员类别 -->
+			</FmtRepeat>
+			<FmtField dataName="_esbAuthFlag" fieldName="AUTH_FLAG" /><!-- 授权标志 -->	
+			<FmtRepeat dataName="_esbAuthUserIdArray" fieldName="AUTH_USER_ID_ARRAY"><!-- 授权柜员数组 -->
+				<FmtField dataName="_esbAuthUserId" fieldName="AUTH_USER_ID" /><!-- 授权柜员标识 -->
+				<FmtField dataName="_esbAuthPassword" fieldName="AUTH_PASSWORD" /><!-- 授权柜员密码 -->
+				<FmtField dataName="_esbAuthLevel" fieldName="AUTH_LEVEL" /><!-- 授权柜员级别 -->
+				<FmtField dataName="_esbAuthType" fieldName="AUTH_TYPE" /><!-- 授权柜员类别 -->
+			</FmtRepeat>			
+			<FmtField dataName="_esbBizSeqNo" fieldName="BIZ_SEQ_NO" /><!-- 发起方业务流水号 -->
+			<FmtField dataName="_esbReversalDate" fieldName="REVERSAL_DATE" /><!-- 需冲正的原交易日期 -->			
+			<FmtField dataName="_esbReversalSeqNo" fieldName="REVERSAL_SEQ_NO" /><!-- 需冲正的原业务流水号 -->
+			<FmtField dataName="_esbServSeqNo" fieldName="SERV_SEQ_NO" /><!-- 服务处理返回流水号 -->
+			<FmtField dataName="_esbPgupOrPgdn" fieldName="PGUP_OR_PGDN" /><!-- 上翻/下翻标志 -->			
+			<FmtField dataName="_esbResultNum" fieldName="RESULT_NUM" /><!-- 本次返回查询结果记录总数 -->
+			<FmtField dataName="_esbTotalNum" fieldName="TOTAL_NUM" /><!-- 符合查询条件的记录总数 -->		
+			<FmtRepeat dataName="_esbQueryKeyArray" fieldName="QUERY_KEY_ARRAY"><!-- KEY数组 -->				
+				<FmtField dataName="_esbQueryKey" fieldName="QUERY_KEY" /><!-- 查询结果定位串 -->
+			</FmtRepeat>			
+			<FmtField dataName="_esbEndFlag" fieldName="END_FLAG" /><!-- 是否结束 -->	
+		</FmtGroup>
+		
+		<FmtGroup dataName="_esbLocal" fieldName="LOCAL_HEAD"><!-- 本地头 -->
+			<FmtField dataName="_esbRuralBranchId" fieldName="RURAL_BRANCH_ID" /><!-- 法人编号 -->
+			<FmtField dataName="_esbBusSeqNo" fieldName="BUS_SEQ_NO" /><!-- 业务跟踪号 -->
+			<FmtField dataName="_esbChannelCode" fieldName="CHANNEL_CODE" /><!-- 渠道号现在默认填写 -->			
+		</FmtGroup>
+
+	</FmtDefine>
+</SDOROOT>	

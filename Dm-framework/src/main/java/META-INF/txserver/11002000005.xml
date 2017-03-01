@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SDOROOT id="11002000005" desc="客户账户签约管理">
+	<FmtDefine dataName="send11002000005" fieldName="" headName="sendmbsHead"><!-- 响应报文 -->
+		<FmtGroup dataName="body" fieldName="BODY"><!-- 报文体 -->
+			<FmtField dataName="certType" fieldName="CERT_TYPE" /><!-- 账户号 -->
+			<FmtField dataName="certNo" fieldName="CERT_NO" /><!-- 账户号 -->
+			<FmtField dataName="custName" fieldName="CUST_NAME" /><!-- 账户号 -->
+			<FmtField dataName="mobile" fieldName="MOBILE" /><!-- 账户号 -->
+			<FmtField dataName="acctNo" fieldName="ACCT_NO" /><!-- 账户号 -->
+			<FmtField dataName="signFlag" fieldName="SIGN_FLAG" /><!-- 签约标识 -->
+		</FmtGroup>
+	</FmtDefine>
+
+	<FmtDefine dataName="receive11002000005" fieldName="" headName="receivembsHead"><!-- 接受报文 -->
+		<FmtGroup dataName="body" fieldName="BODY"><!-- 报文体 -->
+			<FmtField dataName="custNo" fieldName="CUST_NO" /><!-- 客户号 -->
+			<FmtField dataName="certType" fieldName="CERT_TYPE" /><!-- 证件类型 -->
+			<FmtField dataName="certNo" fieldName="CERT_NO" /><!-- 证件号码 -->
+			<FmtField dataName="custName" fieldName="CUST_NAME" /><!-- 客户姓名 -->
+			<FmtField dataName="mobile" fieldName="MOBILE" /><!-- 手机号码 -->
+			<FmtField dataName="loginPwd" fieldName="LOGIN_PASSWORD" /><!-- 手机银行登录密码 -->
+			<FmtField dataName="signChannelId" fieldName="SIGN_CHANNEL_ID" /><!-- 开通渠道号 -->
+			<FmtField dataName="signChannelId" fieldName="SIGN_CHANNEL_CODE" /><!-- 开通渠道号 -->
+			<FmtField dataName="acctNo" fieldName="ACCT_NO" /><!-- 账号 -->
+			<FmtField dataName="acctType" fieldName="ACCT_TYPE" /><!-- 账户类型 -->
+			<FmtField dataName="acctPwd" fieldName="ACCT_PWD" /><!-- 账号密码 -->
+			<FmtField dataName="openBranchId" fieldName="OPEN_BRAN_CODE" /><!-- 开户机构 -->
+			<FmtField dataName="tranDate" fieldName="TRAN_DATE" /><!-- 开户日期 -->
+		</FmtGroup>
+	</FmtDefine>
+</SDOROOT>	
