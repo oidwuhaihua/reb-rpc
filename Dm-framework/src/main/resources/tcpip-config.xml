@@ -14,6 +14,9 @@
 		<property name="defines">
 			<map>
 				<entry key="formatDefine" value="com.dm.remoting.tcpip.format.xml.FormatDefine"/>
+				<entry key="formatGroup" value="com.dm.remoting.tcpip.format.xml.FormatGroup"/>
+				<entry key="formatRepeat" value="com.dm.remoting.tcpip.format.xml.FormatRepeat"/>
+				<entry key="formatField" value="com.dm.remoting.tcpip.format.xml.FormatField"/>
 			</map>
 		</property>
 		<property name="configs">

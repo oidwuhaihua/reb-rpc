@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Dm-framework" />
+        <module name="rebby" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Dm-framework" target="1.5" />
+      <module name="rebby" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
